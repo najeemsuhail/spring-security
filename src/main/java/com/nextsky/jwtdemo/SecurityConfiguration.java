@@ -19,6 +19,7 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        System.out.println("new branch");
       /*  auth.inMemoryAuthentication()
                 .withUser("suhail")
                 .password("password")
