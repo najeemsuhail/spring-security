@@ -30,8 +30,13 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
                 .password("password")
                 .roles("ADMIN"); */
 
+      auth.jdbcAuthentication().dataSource(dataSource);
+
+      /*String query2 = null; //different query
+      String query1 = null;
       auth.jdbcAuthentication().dataSource(dataSource)
-              ;
+              .usersByUsernameQuery(query1)
+              .authoritiesByUsernameQuery(query2);*/
 
     }
 
